@@ -1,23 +1,23 @@
 # 🗄️ Banco de Dados — Ciência da Computação | UNIP
 
-Repositório com os relatórios práticos desenvolvidos nas aulas de Banco de Dados do curso de Ciência da Computação. Os scripts cobrem desde modelagem relacional até consultas avançadas e criação de views, utilizando o projeto fictício **Bella Napoli** (sistema de pizzaria) como base de estudo.
-
----
-
-## 📁 Estrutura do Repositório
-
-```
-📂 banco-de-dados/
-├── relatorio2.sql            → Modelagem relacional (1:N, N:N, 1:1)
-├── Relatorio3_BellaNapoli.sql → Manipulação de dados (INSERT, UPDATE, DELETE)
-├── Relatorio4_BellaNapoli.sql → Consultas e operadores lógicos (SELECT)
-├── Relatorio5_BellaNapoli.sql → Filtros avançados (LIKE, BETWEEN, IN, EXISTS)
-└── Relatorio6_BellaNapoli.sql → Views (CREATE VIEW, OR REPLACE, JOIN)
-```
+Repositório com os relatórios práticos desenvolvidos nas aulas de Banco de Dados do curso de Ciência da Computação. Os scripts cobrem desde a introdução aos conceitos fundamentais até consultas avançadas e criação de views, utilizando dois projetos fictícios como base de estudo: **Adoção Pet** (Relatório 1) e **Bella Napoli** (sistema de pizzaria, Relatórios 3 ao 6).
 
 ---
 
 ## 📄 Relatórios
+
+### Relatório 1 — Introdução e Fundamentação
+Primeiro contato com banco de dados relacional. Projeto **Adoção Pet** como contexto introdutório.
+
+**Conceitos abordados:** estrutura de tabelas, tipos de dados, chaves primárias e estrangeiras, criação de banco de dados
+
+- Definição e propósito de um banco de dados relacional
+- Criação de tabelas com `CREATE TABLE`
+- Tipos de dados básicos (`INT`, `VARCHAR`, `DATE`, `DECIMAL`)
+- Restrições com `NOT NULL`, `PRIMARY KEY` e `FOREIGN KEY`
+- Relacionamento entre entidades do domínio de adoção de animais
+
+---
 
 ### Relatório 2 — Modelagem Relacional
 Criação de tabelas com diferentes tipos de relacionamento usando `PRIMARY KEY` e `FOREIGN KEY`.
@@ -96,4 +96,4 @@ A view `vw_pedidos_pendentes` é atualizada com `OR REPLACE` para adicionar a co
 
 ## 🎓 Sobre
 
-Desenvolvido por **Nathalia** durante o curso de Ciência da Computação na **UNIP (Universidade Paulista)**.
+Desenvolvido por **Nathalia Gonçlaves** durante o curso de Ciência da Computação na **UNIP**.
