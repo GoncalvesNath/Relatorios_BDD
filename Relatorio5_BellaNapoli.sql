@@ -1,6 +1,10 @@
 /* =====================================================
    RELATÓRIO 5 - BELLA NAPOLI
    ===================================================== */
+/* 0. Adição da coluna categoria na tabela pizza */
+ALTER TABLE pizza
+ADD categoria VARCHAR(50);
+
 
 /* 1. Inserção de 5 pizzas */
 INSERT INTO pizza (nome, descricao, categoria, preco)
