@@ -6,6 +6,43 @@
 /* =====================================================
    DESAFIO INICIAL
    ===================================================== */
+CREATE TABLE cliente (
+	id_cliente INT PRIMARY KEY IDENTITY,
+	nome VARCHAR(100) NOT NULL,
+	telefone VARCHAR(20), 
+	endereco VARCHAR (150),
+	data_cadastro DATE DEFAULT cast (getdate() as date)
+	);
+
+CREATE TABLE pizza (
+	id_pizza INT PRIMARY  KEY IDENTITY,
+	nome VARCHAR(100) NOT NULL,
+	descricao VARCHAR(200),
+	preco DECIMAL(10, 2) NOT NULL
+	);
+
+CREATE TABLE pedido (
+	id_pedido INT PRIMARY KEY IDENTITY,
+	id_cliente INT NOT NULL,
+	data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
+	status VARCHAR(30) DEFAULT 'PENDENTE',
+	CONSTRAINT fk_pedido_cliente
+		FOREIGN KEY (id_cliente)
+		REFERENCES cliente(id_cliente)
+	);
+CREATE TABLE item_pedido (
+	id_item INT PRIMARY KEY IDENTITY,
+	id_pedido INT NOT NULL,
+	id_pizza INT NOT NULL,
+	quantidade INT NOT NULL,
+	preco_unit DECIMAL (10, 2) NOT NULL,
+	CONSTRAINT fk_item_pedido
+		FOREIGN KEY (id_pedido)
+		REFERENCES pedido(id_pedido),
+	CONSTRAINT fk_item_pizza
+		FOREIGN KEY (id_pizza)
+		REFERENCES pizza(id_pizza)
+);
 
 /* Inserção de 3 pizzas */
 INSERT INTO pizza (nome, descricao, preco)
