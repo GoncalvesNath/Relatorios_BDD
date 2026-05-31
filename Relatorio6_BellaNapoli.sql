@@ -53,7 +53,7 @@ FROM pizza);
 
 
 /* 3. Manutenção: adicionar coluna de data na view vw_pedidos_pendentes */
-CREATE OR REPLACE VIEW vw_pedidos_pendentes AS (
+ALTER VIEW vw_pedidos_pendentes AS (
 SELECT
     c.nome          AS cliente,
     p.nome          AS pizza,
