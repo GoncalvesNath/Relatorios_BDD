@@ -38,10 +38,10 @@ WHERE endereco IN ('Centro', 'Sudoeste', 'Jardins');
    AMPLIAÇÃO DO DESAFIO
    ===================================================== */
 
-/* 1. Pedidos com data_entrega nula */
+/* 1. Pedidos com data_pedido nula */
 SELECT *
 FROM pedido
-WHERE data_entrega IS NULL;
+WHERE data_pedido IS NULL;
 
 
 /* 2. Clientes que possuem pedidos (EXISTS) */
